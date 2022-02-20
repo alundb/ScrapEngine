@@ -155,7 +155,8 @@ bool ScrapEngine::Render::VulkanDevice::is_device_suitable(vk::PhysicalDevice* p
 	const vk::PhysicalDeviceProperties device_properties = physical_device_input->getProperties();
 	const vk::PhysicalDeviceFeatures device_features = physical_device_input->getFeatures();
 
-	std::string gpu_name(device_properties.deviceName);
+	// std::string gpu_name(device_properties.deviceName);
+        std::string gpu_name = device_properties.deviceName;
 	Debug::DebugLog::print_to_console_log("GPU Selected:" + gpu_name);
 	Debug::DebugLog::print_to_console_log("GPU API v" + std::to_string(device_properties.apiVersion));
 	Debug::DebugLog::print_to_console_log("GPU Driver v" + std::to_string(device_properties.driverVersion));

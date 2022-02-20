@@ -3,6 +3,7 @@
 #include <iostream>
 #include <glm/vec3.hpp>
 #include <glm/ext/quaternion_float.hpp>
+#include <Engine/Rendering/VulkanInclude.h>
 
 namespace ScrapEngine
 {

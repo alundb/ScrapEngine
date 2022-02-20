@@ -15,7 +15,7 @@ ScrapEngine::Physics::RigidBody* ScrapEngine::Physics::SingleRaycast::search_rig
 		return nullptr;
 	}
 
-	const std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<RigidBody*>>> search_iterator =
+        const auto search_iterator =
 		std::find_if(
 			created_rigidbodies_ref_->begin(),
 			created_rigidbodies_ref_->end(),

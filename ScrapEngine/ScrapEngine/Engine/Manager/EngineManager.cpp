@@ -89,7 +89,8 @@ void ScrapEngine::Manager::EngineManager::initialize_views()
 void ScrapEngine::Manager::EngineManager::main_game_loop()
 {
 	Debug::DebugLog::print_to_console_log("---mainGameLoop() started---");
-	std::chrono::time_point<std::chrono::steady_clock> start_time, current_time;
+	// std::chrono::time_point<std::chrono::steady_clock> start_time, current_time;
+        std::chrono::time_point<std::chrono::high_resolution_clock> start_time, current_time;
 	const Render::GameWindow* window_ref = scrap_render_manager_->get_game_window();
 	while (!window_ref->check_window_should_close())
 	{

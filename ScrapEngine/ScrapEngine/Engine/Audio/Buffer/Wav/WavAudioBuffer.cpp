@@ -1,6 +1,8 @@
 #define DR_WAV_IMPLEMENTATION
 #include <Engine/Audio/Buffer/Wav/WavAudioBuffer.h>
 #include <dr_wav.h>
+#include <stdexcept>
+#include <memory>
 
 void ScrapEngine::Audio::WavAudioBuffer::load_file(const std::string& filename)
 {

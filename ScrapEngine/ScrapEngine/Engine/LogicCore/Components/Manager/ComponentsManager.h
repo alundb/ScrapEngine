@@ -2,6 +2,7 @@
 
 #include <Engine/LogicCore/Math/Vector/SVector3.h>
 #include <unordered_map>
+#include <vector>
 
 namespace ScrapEngine
 {

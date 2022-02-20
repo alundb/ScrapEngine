@@ -92,7 +92,10 @@ std::string ScrapEngine::Debug::DebugLog::now_to_string()
 {
 	struct tm timeinfo{};
 	std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-	localtime_s(&timeinfo, &now);
+
+        // "As you can see, the standard C and the Microsoft functions localtime_r() have very different interfaces — the arguments are in the reverse order and the return type is different. By contrast, the difference between the Standard C and POSIX functions is just the name." See: https://stackoverflow.com/questions/69992446/c-location-of-localtime-s-in-gcc
+	// localtime_s(&timeinfo, &now);
+        localtime_r(&now, &timeinfo);
 
 	return "[" + std::to_string(timeinfo.tm_mday) + "-" + std::to_string(timeinfo.tm_mon + 1) + "-" + std::to_string(
 			timeinfo.tm_year + 1900)
